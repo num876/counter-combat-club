@@ -18,37 +18,37 @@ export function Coaches() {
       name: "Muhammad Shariq Hussain",
       title: "Combat Sambo / MMA",
       bio: "From UK. Multiple times British Champion.",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/mma_coach.png"
     },
     {
       name: "Musa Hussain",
       title: "Boxing",
       bio: "British Boxing Champion.",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/boxing_coach.png"
     },
     {
       name: "Tamim Al Kubati",
       title: "Taekwondo / Karate",
       bio: "5× World Champion. Olympic Silver Medalist.",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/taekwondo_coach.png"
     },
     {
       name: "Salman Malitsaev",
       title: "Wrestling",
       bio: "From Chechnya. 11× Chechen Champion. Multiple times Russian Master Champion. Multiple times British Champion.",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/wrestling_coach.png"
     },
     {
       name: "Paul Timmins",
       title: "Combat Sambo / Boxing",
       bio: "Irish/British. British Champion. Irish Champion.",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/boxing_coach.png"
     },
     {
       name: "Sadia Hussain",
       title: "Japanese Jiu Jitsu",
       bio: "From UK. Black Belt.",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/bjj_coach.png"
     }
   ];
 

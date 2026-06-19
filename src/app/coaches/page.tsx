@@ -22,49 +22,49 @@ export default function CoachesPage() {
       discipline: "Combat Sambo / MMA",
       from: "UK",
       credentials: "Multiple times British Champion",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/mma_coach.png"
     },
     {
       name: "Musa Hussain",
       discipline: "Boxing",
       from: "UK",
       credentials: "British Boxing Champion",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/boxing_coach.png"
     },
     {
       name: "Azizul Hakim Mohammed Uddin",
       discipline: "Combat Sambo / MMA",
       from: "UK",
       credentials: "Sambo - BJJ - Grappling, Multiple times British Champion",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/bjj_coach.png"
     },
     {
       name: "Paul Timmins",
       discipline: "Combat Sambo / Boxing",
       from: "Irish/British",
       credentials: "British Champion, Irish Champion",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/boxing_coach.png"
     },
     {
       name: "Sadia Hussain",
       discipline: "Japanese Jiu Jitsu",
       from: "UK",
       credentials: "Black Belt",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/bjj_coach.png"
     },
     {
       name: "Salman Malitsaev",
       discipline: "Wrestling",
       from: "Chechnya",
       credentials: "11X Chechen Champion, Multiple times Russian Master Champion, Multiple times British Champion",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/wrestling_coach.png"
     },
     {
       name: "Tamim Al Kubati",
       discipline: "Taekwondo / Karate",
       from: "Yemen",
       credentials: "5X World Champion, Olympic Silver Medalist",
-      image: "https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+      image: "/taekwondo_coach.png"
     }
   ];
 
