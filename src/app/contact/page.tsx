@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowLeft, Phone, MapPin, Mail, Clock, MessageSquare } from "lucide-react";
 import { buttonVariants } from "@/components/ui/Button";
