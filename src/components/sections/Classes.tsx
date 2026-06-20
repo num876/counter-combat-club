@@ -2,6 +2,8 @@
 
 import { buttonVariants } from "@/components/ui/Button";
 import { ArrowRight, Calendar } from "lucide-react";
+
+export function Classes() {
   return (
     <section id="classes" className="py-24 bg-muted/10 border-y border-muted/30 scroll-mt-16">
       <div className="container">
