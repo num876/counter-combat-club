@@ -37,9 +37,9 @@ export default function ClassesPage() {
       city: "Oxford",
       venues: [
         {
-          name: "South Oxford Community Centre",
-          address: "Lake St, Oxford OX1 4RP",
-          schedule: "Every Monday: 6pm till 7pm, Every Saturday: 3pm till 4pm"
+          name: "CENTRAL OXFORD MOSQUE",
+          address: "Central Oxford Mosque, OX4 1DJ",
+          schedule: "Every Monday: 7.30pm till 8.30pm, Every Friday: 7.30pm till 8.30pm"
         }
       ]
     }
@@ -49,7 +49,7 @@ export default function ClassesPage() {
     { location: "BIRMINGHAM: CCC MMA ACADEMY", time: "Every day except Monday" },
     { location: "BIRMINGHAM: MARTIAL ARTS CENTER", time: "Wednesday & Friday: from 4.30pm till 5.30pm" },
     { location: "LEICESTER: MUBASHIRUN CENTER", time: "Tuesday & Thursday: from 7pm till 8.30pm" },
-    { location: "OXFORD", time: "Monday: from 6pm till 7pm, Saturday: from 3pm till 4pm" },
+    { location: "OXFORD", time: "Monday: from 7.30pm till 8.30pm, Friday: from 7.30pm till 8.30pm" },
   ];
 
   return (

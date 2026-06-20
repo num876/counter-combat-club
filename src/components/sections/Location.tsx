@@ -41,10 +41,10 @@ export function Location() {
       city: "Oxford",
       venues: [
         {
-          name: "South Oxford Community Centre",
-          address: "Lake St, Oxford OX1 4RP",
-          schedule: "Monday: 6:00 pm – 7:00 pm • Saturday: 3:00 pm – 4:00 pm",
-          mapQuery: "South+Oxford+Community+Centre+Lake+St+Oxford+OX1+4RP"
+          name: "Central Oxford Mosque",
+          address: "Central Oxford Mosque OX4 1DJ",
+          schedule: "Monday: 7:30 pm – 8:30 pm • Friday: 7:30 pm – 8:30 pm",
+          mapQuery: "Central+Oxford+Mosque+OX4+1DJ"
         }
       ]
     }
