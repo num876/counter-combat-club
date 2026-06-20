@@ -12,7 +12,7 @@ export function Coaches() {
       name: "Givi Shariashvili",
       title: "Judo / Sambo",
       bio: "From Georgia. 5× World Champion of Sambo and Judo. Russian Champion. Georgian Champion. British Champion.",
-      image: "/nashad.jpg"
+      image: "/givi.jpg"
     },
     {
       name: "Muhammad Shariq Hussain",

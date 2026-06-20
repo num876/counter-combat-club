@@ -15,7 +15,7 @@ export default function CoachesPage() {
       discipline: "Judo / Sambo",
       from: "Georgia",
       credentials: "5X World Champion of Sambo and Judo, Russian Champion, Georgian Champion, British Champion",
-      image: "/nashad.jpg"
+      image: "/givi.jpg"
     },
     {
       name: "Muhammad Shariq Hussain",
