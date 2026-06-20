@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { buttonVariants } from "@/components/ui/Button";
 import { Phone, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "The CCC", href: "/the-ccc" },
@@ -67,47 +68,80 @@ export function Header() {
       </header>
 
       {/* Mobile Navigation Drawer */}
-      {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-40" onClick={() => setMobileOpen(false)}>
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-        </div>
-      )}
-      <nav
-        className={`md:hidden fixed top-16 right-0 bottom-0 z-50 w-72 bg-background border-l border-muted/50 transform transition-transform duration-300 ease-in-out ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex flex-col p-6 space-y-1">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`block py-3 px-4 text-lg font-display font-bold uppercase tracking-widest rounded-lg transition-colors ${
-                  isActive 
-                    ? "text-accent bg-accent/10" 
-                    : "text-foreground hover:text-accent hover:bg-accent/5"
-                }`}
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-          <div className="pt-4 mt-4 border-t border-muted/30">
-            <a
-              href="tel:+447435605543"
-              className={buttonVariants({ variant: "default", size: "lg", className: "w-full flex gap-2" })}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="md:hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
+            />
+            {/* Drawer */}
+            <motion.nav
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="md:hidden fixed top-16 right-0 bottom-0 z-50 w-72 bg-background/80 backdrop-blur-xl border-l border-muted/50"
             >
-              <Phone className="h-5 w-5" />
-              Call Now
-            </a>
-          </div>
-        </div>
-      </nav>
+              <motion.div 
+                className="flex flex-col p-6 space-y-1"
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={{
+                  open: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
+                  closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } }
+                }}
+              >
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <motion.div
+                      key={link.name}
+                      variants={{
+                        open: { x: 0, opacity: 1 },
+                        closed: { x: 50, opacity: 0 }
+                      }}
+                    >
+                      <Link
+                        href={link.href}
+                        className={`block py-3 px-4 text-lg font-display font-bold uppercase tracking-widest rounded-lg transition-colors ${
+                          isActive 
+                            ? "text-accent bg-accent/10" 
+                            : "text-foreground hover:text-accent hover:bg-accent/5"
+                        }`}
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+                <motion.div 
+                  className="pt-4 mt-4 border-t border-muted/30"
+                  variants={{
+                    open: { y: 0, opacity: 1 },
+                    closed: { y: 20, opacity: 0 }
+                  }}
+                >
+                  <a
+                    href="tel:+447435605543"
+                    className={buttonVariants({ variant: "default", size: "lg", className: "w-full flex gap-2" })}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <Phone className="h-5 w-5" />
+                    Call Now
+                  </a>
+                </motion.div>
+              </motion.div>
+            </motion.nav>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Mobile Bottom Sticky Call Bar */}
       <div className="sm:hidden fixed bottom-0 left-0 right-0 p-4 bg-background/95 border-t border-muted/50 backdrop-blur z-50 pb-safe">

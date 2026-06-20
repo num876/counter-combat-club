@@ -3,6 +3,7 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { BackgroundGlow } from "@/components/BackgroundGlow";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       className={`${inter.variable} ${oswald.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground selection:bg-accent selection:text-white">
+        <BackgroundGlow />
         <Header />
         <main className="flex-1 flex flex-col">
           {children}
