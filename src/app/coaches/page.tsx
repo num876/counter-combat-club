@@ -22,7 +22,7 @@ export default function CoachesPage() {
       discipline: "Combat Sambo / MMA",
       from: "UK",
       credentials: "Multiple times British Champion",
-      image: "/mma_coach.png"
+      image: "/coach-shariq.jpg"
     },
     {
       name: "Musa Hussain",

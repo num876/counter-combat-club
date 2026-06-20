@@ -18,7 +18,7 @@ export function Coaches() {
       name: "Muhammad Shariq Hussain",
       title: "Combat Sambo / MMA",
       bio: "From UK. Multiple times British Champion.",
-      image: "/mma_coach.png"
+      image: "/coach-shariq.jpg"
     },
     {
       name: "Musa Hussain",
