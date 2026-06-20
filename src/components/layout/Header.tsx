@@ -24,9 +24,8 @@ export function Header() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-accent flex items-center justify-center rounded font-display font-bold text-white leading-none text-[9px]">
-                CCC
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.jpg" alt="Counter Combat Club Logo" className="h-12 w-12 object-contain rounded-full border border-muted/50" />
               <span className="font-display font-bold text-xl tracking-tight hidden sm:inline-block">
                 COUNTER COMBAT CLUB
               </span>
