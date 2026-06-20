@@ -64,12 +64,12 @@ export function Coaches() {
               All coaches hold Enhanced DBS clearance, are Safeguarding certified, First Aid for Sport qualified, and carry International Professional Instructor ID cards.
             </p>
           </div>
-          <a href="#" className="inline-flex items-center gap-2 font-display uppercase tracking-widest font-bold text-accent hover:text-accent-hover transition-colors whitespace-nowrap">
+          <a href="/coaches" className="inline-flex items-center gap-2 font-display uppercase tracking-widest font-bold text-accent hover:text-accent-hover transition-colors whitespace-nowrap">
             Full Roster <ArrowRight className="h-5 w-5" />
           </a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {coaches.map((coach, index) => (
             <div key={index} className="group relative overflow-hidden rounded-xl bg-muted/20 border border-muted/50 hover:border-accent/50 transition-colors">
               <div className="aspect-[4/5] relative overflow-hidden">
@@ -85,7 +85,7 @@ export function Coaches() {
                   <div className="text-accent font-display text-sm uppercase tracking-widest font-bold mb-1">
                     {coach.title}
                   </div>
-                  <h3 className="font-display font-bold text-2xl uppercase text-foreground mb-2">
+                  <h3 className="font-display font-bold text-lg sm:text-2xl uppercase text-foreground mb-2">
                     {coach.name}
                   </h3>
                   <p className="text-muted-foreground text-sm line-clamp-2">

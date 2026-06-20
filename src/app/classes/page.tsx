@@ -53,7 +53,7 @@ export default function ClassesPage() {
   ];
 
   return (
-    <div className="py-24 bg-background min-h-screen">
+    <div className="py-24 pb-32 sm:pb-24 bg-background min-h-screen">
       <div className="container max-w-5xl">
         <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-12 font-display uppercase tracking-widest text-sm font-bold">
           <ArrowLeft className="h-4 w-4" />
@@ -61,7 +61,7 @@ export default function ClassesPage() {
         </Link>
 
         <div className="text-center mb-16">
-          <h1 className="font-display font-bold text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-6">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-6">
             Chechen Style <span className="text-accent">Combat Sambo</span>
           </h1>
           <p className="text-xl text-muted-foreground">Classes for Adults and Children</p>
@@ -82,7 +82,7 @@ export default function ClassesPage() {
               <p className="font-display text-2xl font-bold text-foreground">£45<span className="text-sm text-muted-foreground">/mo</span></p>
               <p className="text-sm mt-1">2 Sessions/Week</p>
             </div>
-            <div className="bg-accent border border-accent rounded-xl p-4 text-white transform scale-105 shadow-lg relative">
+            <div className="bg-accent border border-accent rounded-xl p-4 text-white sm:scale-105 shadow-lg relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-accent text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded">Popular</div>
               <p className="font-display text-2xl font-bold">£55<span className="text-sm text-white/70">/mo</span></p>
               <p className="text-sm mt-1 font-medium">3 Sessions/Week</p>

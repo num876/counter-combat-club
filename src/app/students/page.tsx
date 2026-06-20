@@ -45,7 +45,7 @@ export default function StudentsPage() {
   ];
 
   return (
-    <div className="py-24 bg-background min-h-screen">
+    <div className="py-24 pb-32 sm:pb-24 bg-background min-h-screen">
       <div className="container max-w-5xl">
         <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-12 font-display uppercase tracking-widest text-sm font-bold">
           <ArrowLeft className="h-4 w-4" />
@@ -53,7 +53,7 @@ export default function StudentsPage() {
         </Link>
 
         <div className="text-center mb-16">
-          <h1 className="font-display font-bold text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-4">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-4">
             Home of <span className="text-accent">Champions</span>
           </h1>
           <p className="text-xl text-muted-foreground">& UK Superstars</p>

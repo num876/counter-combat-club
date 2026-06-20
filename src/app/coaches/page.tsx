@@ -69,7 +69,7 @@ export default function CoachesPage() {
   ];
 
   return (
-    <div className="py-24 bg-background min-h-screen">
+    <div className="py-24 pb-32 sm:pb-24 bg-background min-h-screen">
       <div className="container max-w-6xl">
         <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-12 font-display uppercase tracking-widest text-sm font-bold">
           <ArrowLeft className="h-4 w-4" />
@@ -77,7 +77,7 @@ export default function CoachesPage() {
         </Link>
 
         <div className="text-center mb-16">
-          <h1 className="font-display font-bold text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-6">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-6">
             Our <span className="text-accent">Coaches</span>
           </h1>
           

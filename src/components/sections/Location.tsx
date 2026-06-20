@@ -1,5 +1,4 @@
 import { MapPin, Navigation } from "lucide-react";
-import { buttonVariants } from "@/components/ui/Button";
 
 export function Location() {
   const locations = [

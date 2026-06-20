@@ -81,13 +81,13 @@ export function Classes() {
             <h3 className="font-display font-bold text-3xl uppercase tracking-tight mb-8">
               Monthly <span className="text-accent">Pricing</span>
             </h3>
-            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto overflow-hidden">
               <div className="p-6 rounded-xl border border-muted/50 bg-background hover:border-muted transition-colors">
                 <p className="text-3xl font-bold font-display text-foreground">£45</p>
                 <p className="text-sm text-muted-foreground mt-1">Per Month</p>
                 <p className="text-sm text-foreground/80 font-medium mt-3">2 Sessions per Week</p>
               </div>
-              <div className="p-6 rounded-xl border border-accent/40 bg-accent/5 hover:border-accent/60 transition-colors relative">
+              <div className="p-6 rounded-xl border border-accent/40 bg-accent/5 hover:border-accent/60 transition-colors relative sm:scale-105">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold font-display uppercase tracking-wider px-3 py-1 rounded">Popular</div>
                 <p className="text-3xl font-bold font-display text-foreground">£55</p>
                 <p className="text-sm text-muted-foreground mt-1">Per Month</p>

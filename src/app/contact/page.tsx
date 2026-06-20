@@ -1,12 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Phone, MapPin, Mail, Clock, MessageSquare } from "lucide-react";
-import { buttonVariants } from "@/components/ui/Button";
+import { ArrowLeft, Phone, MapPin, MessageSquare, Globe, CheckCircle2 } from "lucide-react";
 
 export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
-    <div className="py-24 bg-background min-h-screen">
+    <div className="py-24 pb-32 sm:pb-24 bg-background min-h-screen">
       <div className="container max-w-6xl">
         <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-12 font-display uppercase tracking-widest text-sm font-bold">
           <ArrowLeft className="h-4 w-4" />
@@ -14,7 +16,7 @@ export default function ContactPage() {
         </Link>
 
         <div className="mb-16">
-          <h1 className="font-display font-bold text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-4">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl uppercase tracking-tight text-foreground leading-[0.9] mb-4">
             Get In <span className="text-accent">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl">
@@ -103,52 +105,68 @@ export default function ContactPage() {
               <p className="text-muted-foreground">If you want to book a lesson, please tell us your name, age, and preferred training style.</p>
             </div>
 
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-2 gap-6">
+            {submitted ? (
+              <div className="flex flex-col items-center justify-center py-12 text-center h-full">
+                <div className="h-16 w-16 bg-accent/20 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle2 className="h-8 w-8 text-accent" />
+                </div>
+                <h4 className="font-display font-bold text-2xl uppercase tracking-tight text-foreground mb-4">Message Sent!</h4>
+                <p className="text-muted-foreground mb-8">We've received your inquiry and our team will get back to you shortly.</p>
+                <button 
+                  onClick={() => setSubmitted(false)}
+                  className="bg-background border border-muted/50 hover:border-accent hover:text-accent px-6 py-3 rounded-lg font-display font-bold uppercase tracking-widest text-sm transition-colors"
+                >
+                  Send Another Message
+                </button>
+              </div>
+            ) : (
+              <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="firstName" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">First Name *</label>
+                    <input type="text" id="firstName" required className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="age" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Age</label>
+                    <input type="number" id="age" className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
+                  </div>
+                </div>
+
                 <div className="space-y-2">
-                  <label htmlFor="firstName" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">First Name *</label>
-                  <input type="text" id="firstName" required className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
+                  <label htmlFor="email" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Email Address *</label>
+                  <input type="email" id="email" required className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
                 </div>
+
                 <div className="space-y-2">
-                  <label htmlFor="age" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Age</label>
-                  <input type="number" id="age" className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
+                  <label htmlFor="phone" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Phone Number</label>
+                  <input type="tel" id="phone" className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Email Address *</label>
-                <input type="email" id="email" required className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="phone" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Phone Number</label>
-                <input type="tel" id="phone" className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="technique" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Training Technique</label>
-                <select id="technique" className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer">
-                  <option value="">Select a style...</option>
-                  <option value="sambo">Sambo / Combat Sambo</option>
-                  <option value="muay-thai">Muay Thai</option>
-                  <option value="judo">Judo</option>
-                  <option value="wrestling">Wrestling</option>
-                  <option value="weapons">Weapons Combat</option>
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <label htmlFor="message" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Message</label>
-                  <span className="text-xs text-muted-foreground">Max 180 chars</span>
+                <div className="space-y-2">
+                  <label htmlFor="technique" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Training Technique</label>
+                  <select id="technique" className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer">
+                    <option value="" className="bg-background text-foreground">Select a style...</option>
+                    <option value="sambo" className="bg-background text-foreground">Sambo / Combat Sambo</option>
+                    <option value="muay-thai" className="bg-background text-foreground">Muay Thai</option>
+                    <option value="judo" className="bg-background text-foreground">Judo</option>
+                    <option value="wrestling" className="bg-background text-foreground">Wrestling</option>
+                    <option value="weapons" className="bg-background text-foreground">Weapons Combat</option>
+                  </select>
                 </div>
-                <textarea id="message" maxLength={180} rows={4} className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors resize-none"></textarea>
-              </div>
 
-              <button type="submit" className="w-full bg-accent hover:bg-accent-hover text-white font-display font-bold uppercase tracking-widest py-4 rounded-lg transition-colors flex items-center justify-center gap-2">
-                Send Message
-              </button>
-            </form>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="message" className="text-sm font-bold font-display uppercase tracking-wider text-foreground">Message</label>
+                    <span className="text-xs text-muted-foreground">Max 180 chars</span>
+                  </div>
+                  <textarea id="message" maxLength={180} rows={4} className="w-full bg-background border border-muted/50 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors resize-none"></textarea>
+                </div>
+
+                <button type="submit" className="w-full bg-accent hover:bg-accent-hover text-white font-display font-bold uppercase tracking-widest py-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+                  Send Message
+                </button>
+              </form>
+            )}
           </div>
 
         </div>
@@ -157,13 +175,3 @@ export default function ContactPage() {
   );
 }
 
-// Simple fallback for globe icon to avoid missing import errors
-function Globe(props: any) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-      <path d="M2 12h20" />
-    </svg>
-  );
-}

@@ -3,14 +3,14 @@ import { Phone, MapPin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-muted/30 pt-16 pb-8 sm:pb-8 pb-28">
+    <footer className="bg-background border-t border-muted/30 pt-16 pb-32 sm:pb-8">
       {/* Note: extra bottom padding on mobile (pb-28) to account for sticky call bar */}
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="h-8 w-8 bg-accent flex items-center justify-center rounded font-display font-bold text-white leading-none">
+              <div className="h-8 w-8 bg-accent flex items-center justify-center rounded font-display font-bold text-white leading-none text-[9px]">
                 CCC
               </div>
               <span className="font-display font-bold text-xl tracking-tight">
@@ -21,13 +21,13 @@ export function Footer() {
               The UK's Only Coaching Team Built by World Champions and Psychological Professionals.
             </p>
             <div className="flex gap-4 text-sm font-medium text-muted-foreground font-display uppercase tracking-widest">
-              <Link href="#" className="hover:text-accent transition-colors">
+              <Link href="https://facebook.com/countercombatclub" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
                 Facebook
               </Link>
               <Link href="https://instagram.com/countercombatclub" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
                 Instagram
               </Link>
-              <Link href="#" className="hover:text-accent transition-colors">
+              <Link href="https://youtube.com/@countercombatclub" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
                 YouTube
               </Link>
             </div>

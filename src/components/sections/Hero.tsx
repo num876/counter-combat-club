@@ -20,7 +20,7 @@ export function Hero() {
           Sambo • Combat Sambo • MMA
         </div>
 
-        <h1 className="font-display font-bold text-5xl sm:text-6xl md:text-8xl tracking-tight uppercase leading-[0.9] mb-6 text-foreground drop-shadow-lg">
+        <h1 className="font-display font-bold text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase leading-[0.9] mb-6 text-foreground drop-shadow-lg">
           Where <span className="text-accent">Champions</span><br />
           Are Made
         </h1>
