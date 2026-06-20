@@ -8,14 +8,14 @@ export default function CoachesPage() {
       discipline: "Combat Sambo / MMA",
       from: "Chechnya",
       credentials: "9X MMA/Combat Sambo World Champion WCF, 11X European Champion, Kavkaz Cup Champion, Multiple Times National Champion",
-      image: "https://countercombat.club/wp-content/uploads/2023/05/Bisayev.jpg"
+      image: "/bisayev.jpg"
     },
     {
       name: "Givi Shariashvili",
       discipline: "Judo / Sambo",
       from: "Georgia",
       credentials: "5X World Champion of Sambo and Judo, Russian Champion, Georgian Champion, British Champion",
-      image: "https://countercombat.club/wp-content/uploads/2023/05/Nashad.jpg"
+      image: "/nashad.jpg"
     },
     {
       name: "Muhammad Shariq Hussain",
@@ -29,7 +29,7 @@ export default function CoachesPage() {
       discipline: "Boxing",
       from: "UK",
       credentials: "British Boxing Champion",
-      image: "/boxing_coach.png"
+      image: "/musa.jpg"
     },
     {
       name: "Azizul Hakim Mohammed Uddin",
@@ -43,28 +43,28 @@ export default function CoachesPage() {
       discipline: "Combat Sambo / Boxing",
       from: "Irish/British",
       credentials: "British Champion, Irish Champion",
-      image: "/boxing_coach.png"
+      image: "/paul.png"
     },
     {
       name: "Sadia Hussain",
       discipline: "Japanese Jiu Jitsu",
       from: "UK",
       credentials: "Black Belt",
-      image: "/bjj_coach.png"
+      image: "/sadia.jpg"
     },
     {
       name: "Salman Malitsaev",
       discipline: "Wrestling",
       from: "Chechnya",
       credentials: "11X Chechen Champion, Multiple times Russian Master Champion, Multiple times British Champion",
-      image: "/wrestling_coach.png"
+      image: "/salman.png"
     },
     {
       name: "Tamim Al Kubati",
       discipline: "Taekwondo / Karate",
       from: "Yemen",
       credentials: "5X World Champion, Olympic Silver Medalist",
-      image: "/taekwondo_coach.png"
+      image: "/tamim.jpg"
     }
   ];
 

@@ -6,13 +6,13 @@ export function Coaches() {
       name: "Dr. Renato Rustam P.",
       title: "Combat Sambo / MMA Coach",
       bio: "From Chechnya. 9× MMA/Combat Sambo World Champion WCF. 11× European Champion. Kavkaz Cup Champion. Multiple Times National Champion.",
-      image: "https://countercombat.club/wp-content/uploads/2023/05/Bisayev.jpg"
+      image: "/bisayev.jpg"
     },
     {
       name: "Givi Shariashvili",
       title: "Judo / Sambo",
       bio: "From Georgia. 5× World Champion of Sambo and Judo. Russian Champion. Georgian Champion. British Champion.",
-      image: "https://countercombat.club/wp-content/uploads/2023/05/Nashad.jpg"
+      image: "/nashad.jpg"
     },
     {
       name: "Muhammad Shariq Hussain",
@@ -24,31 +24,31 @@ export function Coaches() {
       name: "Musa Hussain",
       title: "Boxing",
       bio: "British Boxing Champion.",
-      image: "/boxing_coach.png"
+      image: "/musa.jpg"
     },
     {
       name: "Tamim Al Kubati",
       title: "Taekwondo / Karate",
       bio: "5× World Champion. Olympic Silver Medalist.",
-      image: "/taekwondo_coach.png"
+      image: "/tamim.jpg"
     },
     {
       name: "Salman Malitsaev",
       title: "Wrestling",
       bio: "From Chechnya. 11× Chechen Champion. Multiple times Russian Master Champion. Multiple times British Champion.",
-      image: "/wrestling_coach.png"
+      image: "/salman.png"
     },
     {
       name: "Paul Timmins",
       title: "Combat Sambo / Boxing",
       bio: "Irish/British. British Champion. Irish Champion.",
-      image: "/boxing_coach.png"
+      image: "/paul.png"
     },
     {
       name: "Sadia Hussain",
       title: "Japanese Jiu Jitsu",
       bio: "From UK. Black Belt.",
-      image: "/bjj_coach.png"
+      image: "/sadia.jpg"
     }
   ];
 
