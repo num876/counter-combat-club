@@ -83,7 +83,7 @@ export function Classes() {
             <h3 className="font-display font-bold text-3xl uppercase tracking-tight mb-8">
               Monthly <span className="text-accent">Pricing</span>
             </h3>
-            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto overflow-hidden">
+            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto py-8 px-4">
               <div className="p-6 rounded-xl border border-muted/50 bg-background hover:border-accent transition-all shadow-lg hover:shadow-[0_0_20px_rgba(229,57,53,0.3)] hover:-translate-y-2">
                 <p className="text-3xl font-bold font-display text-foreground">£45</p>
                 <p className="text-sm text-muted-foreground mt-1">Per Month</p>
