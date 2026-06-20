@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Navigation } from "lucide-react";
+export function Location() {
   const locations = [
     {
       city: "Birmingham",

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+export function Coaches() {
   const coaches = [
     {
       name: "Dr. Renato Rustam P.",
