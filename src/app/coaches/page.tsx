@@ -8,7 +8,7 @@ export default function CoachesPage() {
       discipline: "Combat Sambo / MMA",
       from: "Chechnya",
       credentials: "9X MMA/Combat Sambo World Champion WCF, 11X European Champion, Kavkaz Cup Champion, Multiple Times National Champion",
-      image: "/bisayev.jpg"
+      image: "/renato.jpg"
     },
     {
       name: "Givi Shariashvili",

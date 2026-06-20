@@ -6,7 +6,7 @@ export function Coaches() {
       name: "Dr. Renato Rustam P.",
       title: "Combat Sambo / MMA Coach",
       bio: "From Chechnya. 9× MMA/Combat Sambo World Champion WCF. 11× European Champion. Kavkaz Cup Champion. Multiple Times National Champion.",
-      image: "/bisayev.jpg"
+      image: "/renato.jpg"
     },
     {
       name: "Givi Shariashvili",
