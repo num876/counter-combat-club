@@ -1,9 +1,6 @@
 "use client";
 
 import { MapPin, Navigation } from "lucide-react";
-import { motion } from "framer-motion";
-
-export function Location() {
   const locations = [
     {
       city: "Birmingham",
@@ -56,49 +53,27 @@ export function Location() {
   return (
     <section className="py-24 bg-muted/10 border-y border-muted/30">
       <div className="container">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-4">
             Training <span className="text-accent">Locations</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             We currently deliver training at five locations across the UK.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.15 } }
-          }}
-          className="grid lg:grid-cols-3 gap-8 mb-12"
-        >
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {locations.map((loc, i) => (
-            <motion.div 
-              key={i}
-              variants={{
-                hidden: { opacity: 0, x: -30 },
-                show: { opacity: 1, x: 0, transition: { type: "spring", bounce: 0.4 } }
-              }}
-            >
+            <div key={i}>
               <h3 className="font-display font-bold text-2xl uppercase tracking-wider text-accent mb-4 flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
                 {loc.city}
               </h3>
               <div className="space-y-4">
                 {loc.venues.map((venue, j) => (
-                  <motion.div
+                  <div
                     key={j}
-                    whileHover={{ scale: 1.02, x: 5 }}
-                    className={`p-5 rounded-xl border transition-colors ${
+                    className={`p-5 rounded-xl border transition-all hover:-translate-y-1 hover:scale-[1.02] ${
                       venue.highlight
                         ? "bg-accent/5 border-accent/30 hover:border-accent/60 shadow-[0_0_15px_rgba(229,57,53,0.1)]"
                         : "bg-background border-muted/50 hover:border-accent/30 shadow-sm"
@@ -118,21 +93,15 @@ export function Location() {
                       <Navigation className="h-3 w-3" />
                       Get Directions
                     </a>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Map for HQ */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative rounded-2xl overflow-hidden aspect-video max-w-4xl mx-auto border border-muted/50 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 hover:shadow-[0_0_30px_rgba(229,57,53,0.3)]"
-        >
+        <div className="relative rounded-2xl overflow-hidden aspect-video max-w-4xl mx-auto border border-muted/50 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 hover:shadow-[0_0_30px_rgba(229,57,53,0.3)] hover:scale-[1.01]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.298818037466!2d-1.8590635!3d52.4736631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bba3b5190001%3A0x6bba3b5190001!2s598%20Coventry%20Rd%2C%20Small%20Heath%2C%20Birmingham%20B10%200US!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
             width="100%"
@@ -143,7 +112,7 @@ export function Location() {
             referrerPolicy="no-referrer-when-downgrade"
             className="absolute inset-0 bg-muted/20"
           ></iframe>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

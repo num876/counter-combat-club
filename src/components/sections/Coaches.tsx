@@ -1,9 +1,6 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
-
-export function Coaches() {
   const coaches = [
     {
       name: "Dr. Renato Rustam P.",
@@ -60,15 +57,9 @@ export function Coaches() {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
-            <motion.h2 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
-              className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-4"
-            >
+            <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-4">
               Meet The <span className="text-accent">Champions</span>
-            </motion.h2>
+            </h2>
             <p className="text-muted-foreground text-lg">
               All coaches hold Enhanced DBS clearance, are Safeguarding certified, First Aid for Sport qualified, and carry International Professional Instructor ID cards.
             </p>
@@ -78,29 +69,11 @@ export function Coaches() {
           </a>
         </div>
 
-        <motion.div 
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.15
-              }
-            }
-          }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {coaches.map((coach, index) => (
-            <motion.div 
+            <div 
               key={index} 
-              variants={{
-                hidden: { opacity: 0, y: 100, scale: 0.8 },
-                show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", bounce: 0.5 } }
-              }}
-              whileHover={{ y: -15, scale: 1.02 }}
-              className="group relative overflow-hidden rounded-xl bg-muted/20 border border-muted/50 hover:border-accent shadow-lg hover:shadow-[0_0_30px_rgba(229,57,53,0.5)] transition-all duration-300 z-10 hover:z-20"
+              className="group relative overflow-hidden rounded-xl bg-muted/20 border border-muted/50 hover:border-accent shadow-lg hover:shadow-[0_0_30px_rgba(229,57,53,0.5)] transition-all duration-300 z-10 hover:z-20 hover:-translate-y-4 hover:scale-[1.02]"
             >
               <div className="aspect-[4/5] relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
@@ -123,9 +96,9 @@ export function Coaches() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
