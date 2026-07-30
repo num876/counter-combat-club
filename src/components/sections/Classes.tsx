@@ -1,8 +1,7 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/Button";
-import { ArrowRight, Calendar } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight, Calendar, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -94,15 +93,124 @@ export function Classes() {
               Class Timetable
             </h3>
           </div>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-muted/30 hover:border-accent/30 transition-colors">
-            <Image 
-              src="https://countercombat.club/wp-content/uploads/2026/01/IMG-20260109-WA0019.jpg" 
-              alt="Counter Combat Club Timetable" 
-              width={1200}
-              height={1600}
-              className="w-full h-auto object-contain"
-              priority={false}
-            />
+          {/* Dynamic Timetable */}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-7 gap-2">
+              {[
+                {
+                  day: "Mon",
+                  full: "Monday",
+                  sessions: [
+                    { venue: "Oxford Mosque", city: "Oxford", time: "7:30–8:30 pm", type: "Sambo" }
+                  ]
+                },
+                {
+                  day: "Tue",
+                  full: "Tuesday",
+                  sessions: [
+                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
+                    { venue: "Mubashirun Centre", city: "Leicester", time: "7:00–8:30 pm", type: "Sambo/MMA" }
+                  ]
+                },
+                {
+                  day: "Wed",
+                  full: "Wednesday",
+                  sessions: [
+                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
+                    { venue: "BMAC", city: "Birmingham", time: "4:30–5:30 pm", type: "Sambo" }
+                  ]
+                },
+                {
+                  day: "Thu",
+                  full: "Thursday",
+                  sessions: [
+                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
+                    { venue: "Mubashirun Centre", city: "Leicester", time: "7:00–8:30 pm", type: "Sambo/MMA" }
+                  ]
+                },
+                {
+                  day: "Fri",
+                  full: "Friday",
+                  sessions: [
+                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
+                    { venue: "BMAC", city: "Birmingham", time: "4:30–5:30 pm", type: "Sambo" },
+                    { venue: "Oxford Mosque", city: "Oxford", time: "7:30–8:30 pm", type: "Sambo" }
+                  ]
+                },
+                {
+                  day: "Sat",
+                  full: "Saturday",
+                  sessions: [
+                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" }
+                  ]
+                },
+                {
+                  day: "Sun",
+                  full: "Sunday",
+                  sessions: [
+                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" }
+                  ]
+                }
+              ].map((day) => (
+                <div key={day.day} className="flex flex-col gap-2">
+                  {/* Day Header */}
+                  <div className={`text-center py-3 px-1 rounded-lg font-display font-bold text-xs uppercase tracking-widest ${
+                    day.sessions.some(s => s.city === "Oxford") && day.sessions.length === 1
+                      ? "bg-purple-900/40 border border-purple-500/30 text-purple-300"
+                      : "bg-accent/10 border border-accent/20 text-accent"
+                  }`}>
+                    <span className="block text-lg leading-none mb-0.5">{day.day}</span>
+                    <span className="hidden sm:block text-[9px] opacity-60">{day.full}</span>
+                  </div>
+                  {/* Sessions */}
+                  <div className="flex flex-col gap-1.5">
+                    {day.sessions.map((session, i) => (
+                      <div
+                        key={i}
+                        className={`rounded-lg p-2 border text-[10px] leading-tight ${
+                          session.city === "Oxford"
+                            ? "bg-purple-900/20 border-purple-500/20 text-purple-200"
+                            : session.venue === "CCC HQ"
+                            ? "bg-accent/10 border-accent/20 text-white"
+                            : "bg-muted/20 border-muted/40 text-muted-foreground"
+                        }`}
+                      >
+                        <div className={`font-bold font-display uppercase tracking-wide truncate mb-0.5 ${
+                          session.city === "Oxford" ? "text-purple-300" : session.venue === "CCC HQ" ? "text-accent" : "text-foreground/80"
+                        }`}>
+                          {session.venue}
+                        </div>
+                        <div className="flex items-center gap-0.5 opacity-80">
+                          <Clock className="h-2 w-2 flex-shrink-0" />
+                          <span className="truncate">{session.time}</span>
+                        </div>
+                        <div className="mt-0.5 opacity-60 truncate">{session.type}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Legend */}
+            <div className="flex flex-wrap gap-3 mt-6 justify-center">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span className="h-3 w-3 rounded bg-accent/30 border border-accent/40 inline-block"></span>
+                Birmingham (CCC HQ)
+              </div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span className="h-3 w-3 rounded bg-muted/40 border border-muted/50 inline-block"></span>
+                Birmingham (BMAC)
+              </div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span className="h-3 w-3 rounded bg-purple-900/40 border border-purple-500/30 inline-block"></span>
+                Leicester &amp; Oxford
+              </div>
+            </div>
+
+            <p className="text-center text-xs text-muted-foreground mt-4">
+              * CCC HQ (598 Coventry Rd, B10 0US) runs sessions every day except Monday. Contact us for exact daily times.
+            </p>
           </div>
 
           {/* Pricing */}
