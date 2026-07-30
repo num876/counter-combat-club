@@ -1,7 +1,7 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/Button";
-import { Calendar, Clock } from "lucide-react";
+import { Calendar, Clock, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 import Image from "next/image";
@@ -118,82 +118,82 @@ export function Classes() {
                   day: "Mon",
                   full: "Monday",
                   sessions: [
-                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "location" },
+                    { art: "Sambo", location: "Oxford Mosque", time: "7:30–8:30 pm", type: "location" },
                   ]
                 },
                 {
                   day: "Tue",
                   full: "Tuesday",
                   sessions: [
-                    { label: "Fighters Class", time: "1:30–2:30 pm", type: "fighters" },
-                    { label: "Kids Kickboxing", time: "6:00–7:00 pm", type: "kids" },
-                    { label: "Adults Kickboxing", time: "7:00–8:30 pm", type: "adults" },
-                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "Leicester", time: "7:00–8:30 pm", type: "location" },
+                    { art: "Fighters Class", location: "Birmingham", time: "1:30–2:30 pm", type: "fighters" },
+                    { art: "Kids Kickboxing", location: "Birmingham", time: "6:00–7:00 pm", type: "kids" },
+                    { art: "Adults Kickboxing", location: "Birmingham", time: "7:00–8:30 pm", type: "adults" },
+                    { art: "Fighters Class", location: "Birmingham", time: "8:30–9:30 pm", type: "fighters" },
+                    { art: "Sambo", location: "Leicester", time: "7:00–8:30 pm", type: "location" },
                   ]
                 },
                 {
                   day: "Wed",
                   full: "Wednesday",
                   sessions: [
-                    { label: "Womens Class", time: "1:15–2:15 pm", type: "womens" },
-                    { label: "Womens Class", time: "3:45–4:45 pm", type: "womens" },
-                    { label: "Kids Boxing", time: "5:00–6:00 pm", type: "kids" },
-                    { label: "Kids Sambo", time: "6:00–7:00 pm", type: "kids" },
-                    { label: "Adults Sambo", time: "7:00–8:30 pm", type: "adults" },
-                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "BMAC", time: "4:30–5:30 pm", type: "location" },
+                    { art: "Womens Class", location: "Birmingham", time: "1:15–2:15 pm", type: "womens" },
+                    { art: "Womens Class", location: "Birmingham", time: "3:45–4:45 pm", type: "womens" },
+                    { art: "Kids Boxing", location: "Birmingham", time: "5:00–6:00 pm", type: "kids" },
+                    { art: "Kids Sambo", location: "Birmingham", time: "6:00–7:00 pm", type: "kids" },
+                    { art: "Adults Sambo", location: "Birmingham", time: "7:00–8:30 pm", type: "adults" },
+                    { art: "Fighters Class", location: "Birmingham", time: "8:30–9:30 pm", type: "fighters" },
+                    { art: "Sambo", location: "BMAC", time: "4:30–5:30 pm", type: "location" },
                   ]
                 },
                 {
                   day: "Thu",
                   full: "Thursday",
                   sessions: [
-                    { label: "Fighters Class", time: "1:30–2:30 pm", type: "fighters" },
-                    { label: "Kids Kickboxing", time: "6:00–7:00 pm", type: "kids" },
-                    { label: "Adults Kickboxing", time: "7:00–8:30 pm", type: "adults" },
-                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "Leicester", time: "7:00–8:30 pm", type: "location" },
+                    { art: "Fighters Class", location: "Birmingham", time: "1:30–2:30 pm", type: "fighters" },
+                    { art: "Kids Kickboxing", location: "Birmingham", time: "6:00–7:00 pm", type: "kids" },
+                    { art: "Adults Kickboxing", location: "Birmingham", time: "7:00–8:30 pm", type: "adults" },
+                    { art: "Fighters Class", location: "Birmingham", time: "8:30–9:30 pm", type: "fighters" },
+                    { art: "Sambo", location: "Leicester", time: "7:00–8:30 pm", type: "location" },
                   ]
                 },
                 {
                   day: "Fri",
                   full: "Friday",
                   sessions: [
-                    { label: "Fighters Class", time: "1:30–2:30 pm", type: "fighters" },
-                    { label: "Kids Boxing", time: "5:00–6:00 pm", type: "kids" },
-                    { label: "Kids Sambo", time: "6:00–7:00 pm", type: "kids" },
-                    { label: "Adults Sambo", time: "7:00–8:30 pm", type: "adults" },
-                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "BMAC", time: "4:30–5:30 pm", type: "location" },
-                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "location" },
+                    { art: "Fighters Class", location: "Birmingham", time: "1:30–2:30 pm", type: "fighters" },
+                    { art: "Kids Boxing", location: "Birmingham", time: "5:00–6:00 pm", type: "kids" },
+                    { art: "Kids Sambo", location: "Birmingham", time: "6:00–7:00 pm", type: "kids" },
+                    { art: "Adults Sambo", location: "Birmingham", time: "7:00–8:30 pm", type: "adults" },
+                    { art: "Fighters Class", location: "Birmingham", time: "8:30–9:30 pm", type: "fighters" },
+                    { art: "Sambo", location: "BMAC", time: "4:30–5:30 pm", type: "location" },
+                    { art: "Sambo", location: "Oxford Mosque", time: "7:30–8:30 pm", type: "location" },
                   ]
                 },
                 {
                   day: "Sat",
                   full: "Saturday",
                   sessions: [
-                    { label: "Womens Class", time: "11:00 am–12:00 pm", type: "womens" },
-                    { label: "Adults MMA", time: "1:00–2:30 pm", type: "adults" },
-                    { label: "Adults Sambo", time: "2:30–3:30 pm", type: "adults" },
-                    { label: "Kids Sambo", time: "3:30–4:30 pm", type: "kids" },
-                    { label: "Kids MMA", time: "4:30–5:30 pm", type: "kids" },
-                    { label: "Kids Freestyle", time: "5:30–6:30 pm", type: "kids" },
-                    { label: "Adults Freestyle", time: "6:30–7:30 pm", type: "adults" },
-                    { label: "Adults Boxing", time: "7:30–9:00 pm", type: "adults" },
+                    { art: "Womens Class", location: "Birmingham", time: "11:00 am–12:00 pm", type: "womens" },
+                    { art: "Adults MMA", location: "Birmingham", time: "1:00–2:30 pm", type: "adults" },
+                    { art: "Adults Sambo", location: "Birmingham", time: "2:30–3:30 pm", type: "adults" },
+                    { art: "Kids Sambo", location: "Birmingham", time: "3:30–4:30 pm", type: "kids" },
+                    { art: "Kids MMA", location: "Birmingham", time: "4:30–5:30 pm", type: "kids" },
+                    { art: "Kids Freestyle", location: "Birmingham", time: "5:30–6:30 pm", type: "kids" },
+                    { art: "Adults Freestyle", location: "Birmingham", time: "6:30–7:30 pm", type: "adults" },
+                    { art: "Adults Boxing", location: "Birmingham", time: "7:30–9:00 pm", type: "adults" },
                   ]
                 },
                 {
                   day: "Sun",
                   full: "Sunday",
                   sessions: [
-                    { label: "Adults MMA", time: "1:00–2:30 pm", type: "adults" },
-                    { label: "Adults Sambo", time: "2:30–3:30 pm", type: "adults" },
-                    { label: "Kids Sambo", time: "3:30–4:30 pm", type: "kids" },
-                    { label: "Kids MMA", time: "4:30–5:30 pm", type: "kids" },
-                    { label: "Kids Freestyle", time: "5:30–6:30 pm", type: "kids" },
-                    { label: "Adults Freestyle", time: "6:30–7:30 pm", type: "adults" },
-                    { label: "Adults Boxing", time: "7:30–9:00 pm", type: "adults" },
+                    { art: "Adults MMA", location: "Birmingham", time: "1:00–2:30 pm", type: "adults" },
+                    { art: "Adults Sambo", location: "Birmingham", time: "2:30–3:30 pm", type: "adults" },
+                    { art: "Kids Sambo", location: "Birmingham", time: "3:30–4:30 pm", type: "kids" },
+                    { art: "Kids MMA", location: "Birmingham", time: "4:30–5:30 pm", type: "kids" },
+                    { art: "Kids Freestyle", location: "Birmingham", time: "5:30–6:30 pm", type: "kids" },
+                    { art: "Adults Freestyle", location: "Birmingham", time: "6:30–7:30 pm", type: "adults" },
+                    { art: "Adults Boxing", location: "Birmingham", time: "7:30–9:00 pm", type: "adults" },
                   ]
                 },
               ].map((day) => (
@@ -223,7 +223,11 @@ export function Classes() {
                       return (
                         <div key={i} className={`rounded-md p-1.5 border text-[9px] leading-tight ${styles[session.type]}`}>
                           <div className={`font-bold font-display uppercase tracking-wide mb-0.5 ${labelStyles[session.type]}`}>
-                            {session.label}
+                            {session.art}
+                          </div>
+                          <div className="flex items-center gap-0.5 opacity-75 mb-0.5">
+                            <MapPin className="h-2 w-2 flex-shrink-0" />
+                            <span>{session.location}</span>
                           </div>
                           <div className="flex items-center gap-0.5 opacity-75">
                             <Clock className="h-2 w-2 flex-shrink-0" />
