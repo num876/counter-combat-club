@@ -2,6 +2,7 @@
 
 import { buttonVariants } from "@/components/ui/Button";
 import { ArrowRight, Calendar } from "lucide-react";
+import Image from "next/image";
 
 export function Classes() {
   return (
@@ -70,11 +71,13 @@ export function Classes() {
             </h3>
           </div>
           <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-muted/30 hover:border-accent/30 transition-colors">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
+            <Image 
               src="https://countercombat.club/wp-content/uploads/2026/01/IMG-20260109-WA0019.jpg" 
               alt="Counter Combat Club Timetable" 
+              width={1200}
+              height={1600}
               className="w-full h-auto object-contain"
+              priority={false}
             />
           </div>
 

@@ -1,6 +1,8 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+
 export function Coaches() {
   const coaches = [
     {
@@ -77,13 +79,14 @@ export function Coaches() {
               className="group relative overflow-hidden rounded-xl bg-muted/20 border border-muted/50 hover:border-accent shadow-lg hover:shadow-[0_0_30px_rgba(229,57,53,0.5)] transition-all duration-300 z-10 hover:z-20 hover:-translate-y-4 hover:scale-[1.02]"
             >
               <div className="aspect-[4/5] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
+                <Image 
                   src={coach.image} 
                   alt={coach.name} 
-                  className="object-cover object-top w-full h-full grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-[1.2] mix-blend-luminosity group-hover:mix-blend-normal"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover object-top grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-[1.2] mix-blend-luminosity group-hover:mix-blend-normal"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-500 group-hover:-translate-y-2">
                   <div className="text-accent font-display text-sm uppercase tracking-widest font-bold mb-1 transform transition-all duration-500 group-hover:scale-105 origin-left">
