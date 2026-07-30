@@ -43,14 +43,16 @@ export function Hero() {
           Are Made
         </motion.h1>
         
-        <motion.p 
+        <motion.div 
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "circOut", delay: 0.5 }}
-          className="max-w-2xl text-lg sm:text-xl text-foreground/90 font-medium mb-10 text-pretty md:text-left drop-shadow-md"
         >
-          The UK's Only Coaching Team Built by World Champions and Psychological Professionals. Train at the highest level in Small Heath, Birmingham.
-        </motion.p>
+          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl font-medium drop-shadow-md leading-relaxed border-l-4 border-accent pl-4 py-1 bg-gradient-to-r from-black/60 to-transparent">
+            The UK's Only Coaching Team Built by World Champions and <span className="text-accent font-bold">Psychological Professionals</span>.<br/><br/>
+            <span className="text-sm opacity-90 block">We don't just build physical champions. Through expert psychological coaching, we cultivate unshakeable discipline, emotional regulation, and elite mental resilience in every student.</span>
+          </p>
+        </motion.div>
 
         <motion.div 
           initial={{ y: 50, opacity: 0 }}

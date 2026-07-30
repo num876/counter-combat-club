@@ -2,12 +2,12 @@ export function AboutSambo() {
   return (
     <section className="py-24 bg-background overflow-hidden relative">
       <div className="container">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-6">
-            What is <span className="text-accent">Sambo?</span>
+        <div className="max-w-3xl mb-20 relative z-10">
+          <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-6 text-foreground drop-shadow-lg">
+            The Ultimate <span className="text-accent">Combat System</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Sambo (Russian: са́мбо — самозащита без оружия) is a Russian martial art and combat sport. The word &quot;SAMBO&quot; is a shortening of samozashchita bez oruzhiya, which literally translates as &quot;self-defence without weapons&quot;. Its development began in the early 1920s by the Soviet Red Army to improve their hand-to-hand combat abilities, intended as a merger of the most effective techniques of other martial arts.
+          <p className="text-foreground/90 text-lg md:text-xl font-medium leading-relaxed drop-shadow-md">
+            Sambo (са́мбо) translates to "self-defence without weapons." Forged by combining the most devastating techniques from the world's leading martial arts, it is arguably the most complete and effective combat system on the planet. Whether your goal is real-world self-defense, elite competition, or physical mastery, Sambo equips you with the tools to dominate.
           </p>
         </div>
 
@@ -37,8 +37,8 @@ export function AboutSambo() {
               <span className="h-2 w-2 rounded-full bg-accent"></span>
               Combat Sambo
             </h3>
-            <p className="text-muted-foreground mb-6">
-              Combat Sambo includes all of Wrestling, Grappling, BJJ, Traditional Japanese Jiu Jitsu, Thai Boxing, Judo and more. The SAMBO and Combat Sambo rules can be different in different countries.
+            <p className="text-white/80 mb-6 group-hover:text-white transition-colors flex-grow">
+              A hybrid striking and grappling system where virtually every technique is permitted. This is the ultimate proving ground for mixed martial artists. Training focuses on seamless transitions between heavy striking, clinch work, and fight-ending submissions.
             </p>
             <ul className="space-y-2 text-sm text-foreground font-medium">
               <li className="flex items-center gap-2"><span className="text-accent">✓</span> Full Contact Striking</li>

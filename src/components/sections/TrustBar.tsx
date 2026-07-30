@@ -15,7 +15,7 @@ export function TrustBar() {
     {
       icon: Users,
       title: "Adult & Child Sessions",
-      description: "First lesson £10, refunded on sign-up."
+      description: "First lesson £10, fully refunded on sign-up."
     },
     {
       icon: MapPin,

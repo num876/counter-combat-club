@@ -14,7 +14,7 @@ export function FinalCTA() {
         </h2>
         
         <p className="text-white/90 text-xl font-medium mb-10 max-w-2xl mx-auto drop-shadow">
-          First lesson is just £10 — refunded when you sign up for membership. Contact us to book your trial session this week.
+          Your first lesson is just £10 — fully refunded when you sign up. Contact us to book your trial session this week.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">

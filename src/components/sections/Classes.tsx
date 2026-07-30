@@ -13,7 +13,7 @@ export function Classes() {
             Training <span className="text-accent">Programs</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Chechen Style Combat Sambo classes for adults and children. First lesson is £10 — returned to you upon signing the monthly membership.
+            Chechen Style Combat Sambo classes for adults and children. Your first lesson is just £10 — fully refunded when you sign up.
           </p>
         </div>
 

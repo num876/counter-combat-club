@@ -8,49 +8,49 @@ export function Coaches() {
     {
       name: "Dr. Renato Rustam P.",
       title: "Combat Sambo / MMA Coach",
-      bio: "From Chechnya. 9× MMA/Combat Sambo World Champion WCF. 11× European Champion. Kavkaz Cup Champion. Multiple Times National Champion.",
+      bio: "Hailing from Chechnya, Dr. Renato is a 9× MMA and Combat Sambo World Champion. With 11 European Championship titles to his name, he brings an unmatched level of elite competitive experience to the mats.",
       image: "/renato.jpg"
     },
     {
       name: "Givi Shariashvili",
       title: "Judo / Sambo",
-      bio: "From Georgia. 5× World Champion of Sambo and Judo. Russian Champion. Georgian Champion. British Champion.",
+      bio: "A legendary grappler from Georgia, Givi is a 5× World Champion in both Sambo and Judo. His absolute mastery of the sport has earned him National Championship titles across Russia, Georgia, and the UK.",
       image: "/givi.jpg"
     },
     {
       name: "Muhammad Shariq Hussain",
       title: "Combat Sambo / MMA",
-      bio: "From UK. Multiple times British Champion.",
+      bio: "A multiple-time British Champion, Muhammad combines explosive striking with suffocating grappling. He has built a reputation across the UK for producing dominant fighters.",
       image: "/coach-shariq.jpg"
     },
     {
       name: "Musa Hussain",
       title: "Boxing",
-      bio: "British Boxing Champion.",
+      bio: "A highly decorated British Boxing Champion, Musa specializes in elite striking mechanics, footwork, and devastating knockout power.",
       image: "/musa.jpg"
     },
     {
       name: "Tamim Al Kubati",
       title: "Taekwondo / Karate",
-      bio: "5× World Champion. Olympic Silver Medalist.",
+      bio: "An Olympic Silver Medalist and 5× World Champion, Tamim brings world-class precision, speed, and elite-level traditional martial arts pedigree to the striking program.",
       image: "/tamim.jpg"
     },
     {
       name: "Salman Malitsaev",
       title: "Wrestling",
-      bio: "From Chechnya. 11× Chechen Champion. Multiple times Russian Master Champion. Multiple times British Champion.",
+      bio: "An 11× Chechen Champion and Russian Master of Sport, Salman is a grappling powerhouse who has dominated the wrestling circuits across Europe and the UK.",
       image: "/salman.png"
     },
     {
       name: "Paul Timmins",
       title: "Combat Sambo / Boxing",
-      bio: "Irish/British. British Champion. Irish Champion.",
+      bio: "Holding Championship titles in both Britain and Ireland, Paul is a seasoned combat veteran who seamlessly blends elite boxing with high-level Sambo.",
       image: "/paul.png"
     },
     {
       name: "Sadia Hussain",
       title: "Japanese Jiu Jitsu",
-      bio: "From UK. Black Belt.",
+      bio: "A highly respected Black Belt in traditional Japanese Jiu Jitsu, Sadia specializes in leverage-based self-defense, joint manipulation, and technical grappling.",
       image: "/sadia.jpg"
     }
   ];
