@@ -1,17 +1,38 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+
 export function AboutSambo() {
   return (
     <section className="py-24 bg-background overflow-hidden relative">
       <div className="container">
-        <div className="max-w-3xl mb-20 relative z-10">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="max-w-3xl mb-20 relative z-10"
+        >
           <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-6 text-foreground drop-shadow-lg">
             The Ultimate <span className="text-accent">Combat System</span>
           </h2>
           <p className="text-foreground/90 text-lg md:text-xl font-medium leading-relaxed drop-shadow-md">
             Sambo (са́мбо) translates to "self-defence without weapons." Forged by combining the most devastating techniques from the world's leading martial arts, it is arguably the most complete and effective combat system on the planet. Whether your goal is real-world self-defense, elite competition, or physical mastery, Sambo equips you with the tools to dominate.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto"
+        >
           {/* Sport Sambo */}
           <div className="p-8 rounded-2xl bg-muted/20 border border-muted/50 hover:border-accent/30 transition-colors">
             <h3 className="font-display font-bold text-2xl uppercase mb-4 text-foreground flex items-center gap-3">
@@ -46,7 +67,7 @@ export function AboutSambo() {
               <li className="flex items-center gap-2"><span className="text-accent">✓</span> No-Holds-Barred Combat</li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -3,21 +3,39 @@
 import { buttonVariants } from "@/components/ui/Button";
 import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
 
 export function Classes() {
   return (
     <section id="classes" className="py-24 bg-muted/10 border-y border-muted/30 scroll-mt-16">
       <div className="container">
-        <div className="text-center mb-16">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="text-center mb-16"
+        >
           <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-4">
             Training <span className="text-accent">Programs</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Chechen Style Combat Sambo classes for adults and children. Your first lesson is just £10 — fully refunded when you sign up.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        >
           {/* Adults */}
           <div className="group relative overflow-hidden rounded-2xl bg-background border border-muted/50 transition-all hover:border-accent shadow-xl hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(229,57,53,0.3)]">
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
@@ -61,9 +79,15 @@ export function Classes() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-20">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mt-20"
+        >
           <div className="text-center mb-8">
             <h3 className="font-display font-bold text-3xl uppercase tracking-tight flex items-center justify-center gap-3">
               <Calendar className="h-8 w-8 text-accent" />
@@ -105,7 +129,7 @@ export function Classes() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
