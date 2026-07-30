@@ -6,7 +6,7 @@ export function FinalCTA() {
     <section className="py-24 bg-accent relative overflow-hidden">
       {/* Background texture */}
       <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay" />
+      <div className="absolute inset-0 bg-[url('/textures/carbon.png')] opacity-20 mix-blend-overlay" />
       
       <div className="container relative z-10 text-center max-w-4xl mx-auto">
         <h2 className="font-display font-bold text-3xl sm:text-5xl md:text-7xl uppercase tracking-tight text-white mb-6 drop-shadow-lg leading-[0.9]">

@@ -1,15 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
-};
+import { fadeUp } from "@/lib/animations";
 
 export function AboutSambo() {
   return (
-    <section className="py-24 bg-background overflow-hidden relative">
+    <section id="about" className="py-24 bg-background overflow-hidden relative">
       <div className="container">
         <motion.div
           variants={fadeUp}

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { buttonVariants } from "@/components/ui/Button";
 import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { name: "The CCC", href: "/the-ccc" },
@@ -25,8 +26,7 @@ export function Header() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center space-x-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.jpg" alt="Counter Combat Club Logo" className="h-12 w-12 object-contain rounded-full border border-muted/50" />
+              <Image src="/logo.jpg" alt="Counter Combat Club Logo" width={48} height={48} className="object-contain rounded-full border border-muted/50" />
               <span className="font-display font-bold text-xl tracking-tight hidden sm:inline-block">
                 COUNTER COMBAT CLUB
               </span>
@@ -84,49 +84,28 @@ export function Header() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              transition={{ duration: 0.25, ease: "easeOut" as const }}
               className="md:hidden fixed top-16 right-0 bottom-0 z-50 w-72 bg-background/80 backdrop-blur-xl border-l border-muted/50"
             >
-              <motion.div 
-                className="flex flex-col p-6 space-y-1"
-                initial="closed"
-                animate="open"
-                exit="closed"
-                variants={{
-                  open: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
-                  closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } }
-                }}
-              >
+              <div className="flex flex-col p-6 space-y-1">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
                   return (
-                    <motion.div
-                      key={link.name}
-                      variants={{
-                        open: { x: 0, opacity: 1 },
-                        closed: { x: 50, opacity: 0 }
-                      }}
+                    <Link
+                      href={link.href}
+                      className={`block py-3 px-4 text-lg font-display font-bold uppercase tracking-widest rounded-lg transition-colors ${
+                        isActive 
+                          ? "text-accent bg-accent/10" 
+                          : "text-foreground hover:text-accent hover:bg-accent/5"
+                      }`}
+                      onClick={() => setMobileOpen(false)}
                     >
-                      <Link
-                        href={link.href}
-                        className={`block py-3 px-4 text-lg font-display font-bold uppercase tracking-widest rounded-lg transition-colors ${
-                          isActive 
-                            ? "text-accent bg-accent/10" 
-                            : "text-foreground hover:text-accent hover:bg-accent/5"
-                        }`}
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {link.name}
-                      </Link>
-                    </motion.div>
+                      {link.name}
+                    </Link>
                   );
                 })}
-                <motion.div 
+                <div 
                   className="pt-4 mt-4 border-t border-muted/30"
-                  variants={{
-                    open: { y: 0, opacity: 1 },
-                    closed: { y: 20, opacity: 0 }
-                  }}
                 >
                   <a
                     href="tel:+447435605543"
@@ -136,8 +115,8 @@ export function Header() {
                     <Phone className="h-5 w-5" />
                     Call Now
                   </a>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             </motion.nav>
           </>
         )}

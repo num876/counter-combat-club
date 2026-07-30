@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Partners() {
   const partners = [
     { name: "BattleArena", logo: "https://countercombat.club/wp-content/uploads/2023/05/BattleArena.png" },
@@ -21,8 +23,13 @@ export function Partners() {
               className="grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-default"
               title={partner.name}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={partner.logo} alt={partner.name} className="h-12 w-auto object-contain mix-blend-luminosity hover:mix-blend-normal" />
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={120}
+                height={48}
+                className="h-12 w-auto object-contain"
+              />
             </div>
           ))}
         </div>

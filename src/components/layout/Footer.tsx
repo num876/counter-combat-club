@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, MapPin, Mail } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -10,8 +11,7 @@ export function Footer() {
           
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.jpg" alt="Counter Combat Club Logo" className="h-14 w-14 object-contain rounded-full border border-muted/50" />
+              <Image src="/logo.jpg" alt="Counter Combat Club Logo" width={56} height={56} className="object-contain rounded-full border border-muted/50" />
               <span className="font-display font-bold text-xl tracking-tight">
                 COUNTER COMBAT CLUB
               </span>

@@ -3,11 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
-};
+import { fadeUp } from "@/lib/animations";
 
 export function Coaches() {
   const coaches = [
@@ -88,7 +84,7 @@ export function Coaches() {
           {coaches.map((coach, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden rounded-xl bg-muted/20 border border-muted/50 hover:border-accent shadow-lg hover:shadow-[0_0_30px_rgba(229,57,53,0.5)] transition-all duration-300 z-10 hover:z-20 hover:-translate-y-4 hover:scale-[1.02]"
+              className="group relative overflow-hidden rounded-xl bg-muted/20 border border-muted/50 hover:border-accent transition-all duration-300 z-10 hover:z-20 hover:-translate-y-4 hover:scale-[1.02] hover:[filter:drop-shadow(0_0_20px_rgba(229,57,53,0.4))]"
             >
               <div className="aspect-[4/5] relative overflow-hidden">
                 <Image 
@@ -96,7 +92,7 @@ export function Coaches() {
                   alt={coach.name} 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className="object-cover object-top grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-[1.2] mix-blend-luminosity group-hover:mix-blend-normal"
+                  className="object-cover object-top grayscale group-hover:grayscale-0 transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.2]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
                 

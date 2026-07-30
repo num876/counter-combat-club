@@ -1,13 +1,10 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/Button";
-import { ArrowRight, Calendar, MapPin, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { motion } from "framer-motion";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
-};
+import { fadeUp } from "@/lib/animations";
+import Image from "next/image";
 
 export function Classes() {
   return (
@@ -38,7 +35,13 @@ export function Classes() {
           {/* Adults */}
           <div className="group relative overflow-hidden rounded-2xl bg-background border border-muted/50 transition-all hover:border-accent shadow-xl hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(229,57,53,0.3)]">
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
-            <div className="absolute inset-0 bg-[url('https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg')] bg-cover bg-center opacity-40 group-hover:scale-105 group-hover:opacity-60 transition-all duration-700 grayscale mix-blend-luminosity" />
+            <Image
+              src="https://countercombat.club/wp-content/uploads/2026/01/the-coach-team-e1768006174557.jpg"
+              alt="Adult Sambo and MMA training session"
+              fill
+              className="object-cover object-center opacity-40 grayscale group-hover:grayscale-0 transition-[transform,opacity,filter] duration-700 group-hover:scale-105 group-hover:opacity-60"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             
             <div className="relative z-20 p-8 h-full flex flex-col justify-end min-h-[400px]">
               <div className="mb-2 bg-accent text-white text-xs font-bold font-display uppercase tracking-wider px-3 py-1 inline-flex w-fit rounded">
@@ -60,7 +63,13 @@ export function Classes() {
           {/* Kids */}
           <div className="group relative overflow-hidden rounded-2xl bg-background border border-muted/50 transition-all hover:border-accent shadow-xl hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(229,57,53,0.3)]">
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb046eeb?q=80&w=2120&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:scale-105 group-hover:opacity-60 transition-all duration-700 grayscale mix-blend-luminosity" />
+            <Image
+              src="https://images.unsplash.com/photo-1544367567-0f2fcb046eeb?q=80&w=900&auto=format&fit=crop"
+              alt="Children's martial arts session"
+              fill
+              className="object-cover object-center opacity-40 grayscale group-hover:grayscale-0 transition-[transform,opacity,filter] duration-700 group-hover:scale-105 group-hover:opacity-60"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             
             <div className="relative z-20 p-8 h-full flex flex-col justify-end min-h-[400px]">
               <div className="mb-2 bg-white text-black text-xs font-bold font-display uppercase tracking-wider px-3 py-1 inline-flex w-fit rounded">
@@ -94,8 +103,15 @@ export function Classes() {
             </h3>
           </div>
           {/* Dynamic Timetable */}
-          <div className="max-w-6xl mx-auto overflow-x-auto">
-            <div className="grid grid-cols-7 gap-1.5 min-w-[640px]">
+          <div className="max-w-6xl mx-auto">
+            <div className="overflow-x-auto relative">
+              {/* Scroll affordance on mobile */}
+              <div className="sm:hidden text-center text-xs text-muted-foreground mb-2 flex items-center justify-center gap-1">
+                <span>Scroll to see full week</span>
+                <span>→</span>
+              </div>
+              <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none z-10 sm:hidden" />
+              <div className="grid grid-cols-7 gap-1.5 min-w-[640px]">
               {[
                 {
                   day: "Mon",
@@ -238,6 +254,7 @@ export function Classes() {
             <p className="text-center text-xs text-muted-foreground mt-3">
               All CCC HQ sessions at 598 Coventry Rd, Small Heath, Birmingham B10 0US
             </p>
+            </div>{/* end overflow-x-auto */}
           </div>
 
           {/* Pricing */}

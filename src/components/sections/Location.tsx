@@ -2,11 +2,7 @@
 
 import { MapPin, Navigation } from "lucide-react";
 import { motion } from "framer-motion";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
-};
+import { fadeUp } from "@/lib/animations";
 
 export function Location() {
   const locations = [
@@ -59,7 +55,7 @@ export function Location() {
   ];
 
   return (
-    <section className="py-24 bg-muted/10 border-y border-muted/30">
+    <section id="location" className="py-24 bg-muted/10 border-y border-muted/30 scroll-mt-16">
       <div className="container">
         <motion.div
           variants={fadeUp}

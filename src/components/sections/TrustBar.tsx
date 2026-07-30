@@ -25,7 +25,7 @@ export function TrustBar() {
   ];
 
   return (
-    <section className="bg-muted/30 border-y border-muted/50 py-12 relative z-20 -mt-16 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <section className="bg-background/95 border-y border-muted/50 py-12 relative z-20 -mt-16">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
           {points.map((point, index) => (

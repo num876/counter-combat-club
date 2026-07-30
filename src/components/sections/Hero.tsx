@@ -3,20 +3,32 @@
 import { buttonVariants } from "@/components/ui/Button";
 import { Phone, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
-      {/* Background with placeholder overlay for future image */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-background/40 via-background/80 to-background">
-        <div className="absolute inset-0 bg-black/60 mix-blend-multiply z-10" />
-        {/* HD Sambo Background with intense zoom-out effect */}
-        <motion.div 
+      {/* Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background z-20" />
+        {/* Grayscale overlay for blend effect — static, no repaint */}
+        <div className="absolute inset-0 bg-background/30 mix-blend-color z-[5]" />
+        <motion.div
           initial={{ scale: 1.4, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.4 }}
+          animate={{ scale: 1, opacity: 0.55 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute inset-0 bg-[url('/hd_sambo_hero.png')] bg-cover bg-center grayscale mix-blend-luminosity z-0" 
-        />
+          className="absolute inset-0 z-0"
+        >
+          <Image
+            src="/hd_sambo_hero.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center grayscale"
+            sizes="100vw"
+          />
+        </motion.div>
       </div>
 
       <div className="container relative z-10 pt-20 pb-32 text-center md:text-left flex flex-col md:items-start items-center">
@@ -49,8 +61,8 @@ export function Hero() {
           transition={{ duration: 0.6, ease: "circOut", delay: 0.5 }}
         >
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl font-medium drop-shadow-md leading-relaxed border-l-4 border-accent pl-4 py-1 bg-gradient-to-r from-black/60 to-transparent">
-            The UK's Only Coaching Team Built by World Champions and <span className="text-accent font-bold">Psychological Professionals</span>.<br/><br/>
-            <span className="text-sm opacity-90 block">We don't just build physical champions. Through expert psychological coaching, we cultivate unshakeable discipline, emotional regulation, and elite mental resilience in every student.</span>
+            The UK's Only Coaching Team Built by World Champions and <span className="text-accent font-bold">Psychological Professionals</span>.
+            <span className="text-sm opacity-90 block mt-4">We don't just build physical champions. Through expert psychological coaching, we cultivate unshakeable discipline, emotional regulation, and elite mental resilience in every student.</span>
           </p>
         </motion.div>
 
