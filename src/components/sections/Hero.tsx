@@ -82,10 +82,10 @@ export function Hero() {
             WhatsApp / Call Now
           </a>
           <a
-            href="#classes"
+            href="#about"
             className={buttonVariants({ variant: "outline", size: "lg", className: "w-full sm:w-auto gap-2 bg-background/50 backdrop-blur hover:bg-background/80" })}
           >
-            View Classes
+            View Sambo
             <ArrowDown className="h-4 w-4" />
           </a>
         </motion.div>

@@ -11,8 +11,7 @@ export function AboutSambo() {
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="max-w-3xl mb-20 relative z-10"
+          className="max-w-3xl mx-auto text-center mb-20 relative z-10"
         >
           <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tight mb-6 text-foreground drop-shadow-lg">
             The Ultimate <span className="text-accent">Combat System</span>

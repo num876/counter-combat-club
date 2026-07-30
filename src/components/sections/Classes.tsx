@@ -103,21 +103,22 @@ export function Classes() {
             </h3>
           </div>
           {/* Dynamic Timetable */}
-          <div className="max-w-6xl mx-auto">
-            <div className="overflow-x-auto relative">
-              {/* Scroll affordance on mobile */}
-              <div className="sm:hidden text-center text-xs text-muted-foreground mb-2 flex items-center justify-center gap-1">
-                <span>Scroll to see full week</span>
-                <span>→</span>
-              </div>
-              <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none z-10 sm:hidden" />
+          <div className="max-w-6xl mx-auto relative">
+            {/* Scroll affordance on mobile */}
+            <div className="sm:hidden text-center text-xs text-muted-foreground mb-2 flex items-center justify-center gap-1">
+              <span>Scroll to see full week</span>
+              <span>→</span>
+            </div>
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none z-10 sm:hidden" />
+            
+            <div className="overflow-x-auto pb-4">
               <div className="grid grid-cols-7 gap-1.5 min-w-[640px]">
               {[
                 {
                   day: "Mon",
                   full: "Monday",
                   sessions: [
-                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "oxford" },
+                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "location" },
                   ]
                 },
                 {
@@ -128,7 +129,7 @@ export function Classes() {
                     { label: "Kids Kickboxing", time: "6:00–7:00 pm", type: "kids" },
                     { label: "Adults Kickboxing", time: "7:00–8:30 pm", type: "adults" },
                     { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "Leicester", time: "7:00–8:30 pm", type: "oxford" },
+                    { label: "Leicester", time: "7:00–8:30 pm", type: "location" },
                   ]
                 },
                 {
@@ -141,7 +142,7 @@ export function Classes() {
                     { label: "Kids Sambo", time: "6:00–7:00 pm", type: "kids" },
                     { label: "Adults Sambo", time: "7:00–8:30 pm", type: "adults" },
                     { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "BMAC", time: "4:30–5:30 pm", type: "oxford" },
+                    { label: "BMAC", time: "4:30–5:30 pm", type: "location" },
                   ]
                 },
                 {
@@ -152,7 +153,7 @@ export function Classes() {
                     { label: "Kids Kickboxing", time: "6:00–7:00 pm", type: "kids" },
                     { label: "Adults Kickboxing", time: "7:00–8:30 pm", type: "adults" },
                     { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "Leicester", time: "7:00–8:30 pm", type: "oxford" },
+                    { label: "Leicester", time: "7:00–8:30 pm", type: "location" },
                   ]
                 },
                 {
@@ -164,8 +165,8 @@ export function Classes() {
                     { label: "Kids Sambo", time: "6:00–7:00 pm", type: "kids" },
                     { label: "Adults Sambo", time: "7:00–8:30 pm", type: "adults" },
                     { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
-                    { label: "BMAC", time: "4:30–5:30 pm", type: "oxford" },
-                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "oxford" },
+                    { label: "BMAC", time: "4:30–5:30 pm", type: "location" },
+                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "location" },
                   ]
                 },
                 {
@@ -210,14 +211,14 @@ export function Classes() {
                         womens:   "bg-pink-900/30 border-pink-500/30 text-pink-200",
                         kids:     "bg-amber-900/30 border-amber-500/30 text-amber-200",
                         adults:   "bg-blue-900/30 border-blue-500/30 text-blue-200",
-                        oxford:   "bg-purple-900/20 border-purple-500/20 text-purple-300",
+                        location: "bg-purple-900/20 border-purple-500/20 text-purple-300",
                       };
                       const labelStyles: Record<string, string> = {
                         fighters: "text-red-400",
                         womens:   "text-pink-400",
                         kids:     "text-amber-400",
                         adults:   "text-blue-400",
-                        oxford:   "text-purple-400",
+                        location: "text-purple-400",
                       };
                       return (
                         <div key={i} className={`rounded-md p-1.5 border text-[9px] leading-tight ${styles[session.type]}`}>
@@ -235,6 +236,7 @@ export function Classes() {
                 </div>
               ))}
             </div>
+            </div>{/* end overflow-x-auto */}
 
             {/* Legend */}
             <div className="flex flex-wrap gap-3 mt-6 justify-center">
@@ -254,7 +256,6 @@ export function Classes() {
             <p className="text-center text-xs text-muted-foreground mt-3">
               All CCC HQ sessions at 598 Coventry Rd, Small Heath, Birmingham B10 0US
             </p>
-            </div>{/* end overflow-x-auto */}
           </div>
 
           {/* Pricing */}
