@@ -94,99 +94,127 @@ export function Classes() {
             </h3>
           </div>
           {/* Dynamic Timetable */}
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-7 gap-2">
+          <div className="max-w-6xl mx-auto overflow-x-auto">
+            <div className="grid grid-cols-7 gap-1.5 min-w-[640px]">
               {[
                 {
                   day: "Mon",
                   full: "Monday",
                   sessions: [
-                    { venue: "Oxford Mosque", city: "Oxford", time: "7:30–8:30 pm", type: "Sambo" }
+                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "oxford" },
                   ]
                 },
                 {
                   day: "Tue",
                   full: "Tuesday",
                   sessions: [
-                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
-                    { venue: "Mubashirun Centre", city: "Leicester", time: "7:00–8:30 pm", type: "Sambo/MMA" }
+                    { label: "Fighters Class", time: "1:30–2:30 pm", type: "fighters" },
+                    { label: "Kids Kickboxing", time: "6:00–7:00 pm", type: "kids" },
+                    { label: "Adults Kickboxing", time: "7:00–8:30 pm", type: "adults" },
+                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
+                    { label: "Leicester", time: "7:00–8:30 pm", type: "oxford" },
                   ]
                 },
                 {
                   day: "Wed",
                   full: "Wednesday",
                   sessions: [
-                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
-                    { venue: "BMAC", city: "Birmingham", time: "4:30–5:30 pm", type: "Sambo" }
+                    { label: "Womens Class", time: "1:15–2:15 pm", type: "womens" },
+                    { label: "Womens Class", time: "3:45–4:45 pm", type: "womens" },
+                    { label: "Kids Boxing", time: "5:00–6:00 pm", type: "kids" },
+                    { label: "Kids Sambo", time: "6:00–7:00 pm", type: "kids" },
+                    { label: "Adults Sambo", time: "7:00–8:30 pm", type: "adults" },
+                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
+                    { label: "BMAC", time: "4:30–5:30 pm", type: "oxford" },
                   ]
                 },
                 {
                   day: "Thu",
                   full: "Thursday",
                   sessions: [
-                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
-                    { venue: "Mubashirun Centre", city: "Leicester", time: "7:00–8:30 pm", type: "Sambo/MMA" }
+                    { label: "Fighters Class", time: "1:30–2:30 pm", type: "fighters" },
+                    { label: "Kids Kickboxing", time: "6:00–7:00 pm", type: "kids" },
+                    { label: "Adults Kickboxing", time: "7:00–8:30 pm", type: "adults" },
+                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
+                    { label: "Leicester", time: "7:00–8:30 pm", type: "oxford" },
                   ]
                 },
                 {
                   day: "Fri",
                   full: "Friday",
                   sessions: [
-                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" },
-                    { venue: "BMAC", city: "Birmingham", time: "4:30–5:30 pm", type: "Sambo" },
-                    { venue: "Oxford Mosque", city: "Oxford", time: "7:30–8:30 pm", type: "Sambo" }
+                    { label: "Fighters Class", time: "1:30–2:30 pm", type: "fighters" },
+                    { label: "Kids Boxing", time: "5:00–6:00 pm", type: "kids" },
+                    { label: "Kids Sambo", time: "6:00–7:00 pm", type: "kids" },
+                    { label: "Adults Sambo", time: "7:00–8:30 pm", type: "adults" },
+                    { label: "Fighters Class", time: "8:30–9:30 pm", type: "fighters" },
+                    { label: "BMAC", time: "4:30–5:30 pm", type: "oxford" },
+                    { label: "Oxford Mosque", time: "7:30–8:30 pm", type: "oxford" },
                   ]
                 },
                 {
                   day: "Sat",
                   full: "Saturday",
                   sessions: [
-                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" }
+                    { label: "Womens Class", time: "11:00 am–12:00 pm", type: "womens" },
+                    { label: "Adults MMA", time: "1:00–2:30 pm", type: "adults" },
+                    { label: "Adults Sambo", time: "2:30–3:30 pm", type: "adults" },
+                    { label: "Kids Sambo", time: "3:30–4:30 pm", type: "kids" },
+                    { label: "Kids MMA", time: "4:30–5:30 pm", type: "kids" },
+                    { label: "Kids Freestyle", time: "5:30–6:30 pm", type: "kids" },
+                    { label: "Adults Freestyle", time: "6:30–7:30 pm", type: "adults" },
+                    { label: "Adults Boxing", time: "7:30–9:00 pm", type: "adults" },
                   ]
                 },
                 {
                   day: "Sun",
                   full: "Sunday",
                   sessions: [
-                    { venue: "CCC HQ", city: "Birmingham", time: "See HQ", type: "All Classes" }
+                    { label: "Adults MMA", time: "1:00–2:30 pm", type: "adults" },
+                    { label: "Adults Sambo", time: "2:30–3:30 pm", type: "adults" },
+                    { label: "Kids Sambo", time: "3:30–4:30 pm", type: "kids" },
+                    { label: "Kids MMA", time: "4:30–5:30 pm", type: "kids" },
+                    { label: "Kids Freestyle", time: "5:30–6:30 pm", type: "kids" },
+                    { label: "Adults Freestyle", time: "6:30–7:30 pm", type: "adults" },
+                    { label: "Adults Boxing", time: "7:30–9:00 pm", type: "adults" },
                   ]
-                }
+                },
               ].map((day) => (
-                <div key={day.day} className="flex flex-col gap-2">
+                <div key={day.day} className="flex flex-col gap-1.5">
                   {/* Day Header */}
-                  <div className={`text-center py-3 px-1 rounded-lg font-display font-bold text-xs uppercase tracking-widest ${
-                    day.sessions.some(s => s.city === "Oxford") && day.sessions.length === 1
-                      ? "bg-purple-900/40 border border-purple-500/30 text-purple-300"
-                      : "bg-accent/10 border border-accent/20 text-accent"
-                  }`}>
-                    <span className="block text-lg leading-none mb-0.5">{day.day}</span>
-                    <span className="hidden sm:block text-[9px] opacity-60">{day.full}</span>
+                  <div className="text-center py-2.5 px-1 rounded-lg font-display font-bold uppercase tracking-widest bg-accent/10 border border-accent/20 text-accent">
+                    <span className="block text-base leading-none">{day.day}</span>
+                    <span className="hidden sm:block text-[9px] opacity-60 mt-0.5">{day.full}</span>
                   </div>
                   {/* Sessions */}
-                  <div className="flex flex-col gap-1.5">
-                    {day.sessions.map((session, i) => (
-                      <div
-                        key={i}
-                        className={`rounded-lg p-2 border text-[10px] leading-tight ${
-                          session.city === "Oxford"
-                            ? "bg-purple-900/20 border-purple-500/20 text-purple-200"
-                            : session.venue === "CCC HQ"
-                            ? "bg-accent/10 border-accent/20 text-white"
-                            : "bg-muted/20 border-muted/40 text-muted-foreground"
-                        }`}
-                      >
-                        <div className={`font-bold font-display uppercase tracking-wide truncate mb-0.5 ${
-                          session.city === "Oxford" ? "text-purple-300" : session.venue === "CCC HQ" ? "text-accent" : "text-foreground/80"
-                        }`}>
-                          {session.venue}
+                  <div className="flex flex-col gap-1">
+                    {day.sessions.map((session, i) => {
+                      const styles: Record<string, string> = {
+                        fighters: "bg-red-900/30 border-red-500/30 text-red-200",
+                        womens:   "bg-pink-900/30 border-pink-500/30 text-pink-200",
+                        kids:     "bg-amber-900/30 border-amber-500/30 text-amber-200",
+                        adults:   "bg-blue-900/30 border-blue-500/30 text-blue-200",
+                        oxford:   "bg-purple-900/20 border-purple-500/20 text-purple-300",
+                      };
+                      const labelStyles: Record<string, string> = {
+                        fighters: "text-red-400",
+                        womens:   "text-pink-400",
+                        kids:     "text-amber-400",
+                        adults:   "text-blue-400",
+                        oxford:   "text-purple-400",
+                      };
+                      return (
+                        <div key={i} className={`rounded-md p-1.5 border text-[9px] leading-tight ${styles[session.type]}`}>
+                          <div className={`font-bold font-display uppercase tracking-wide mb-0.5 ${labelStyles[session.type]}`}>
+                            {session.label}
+                          </div>
+                          <div className="flex items-center gap-0.5 opacity-75">
+                            <Clock className="h-2 w-2 flex-shrink-0" />
+                            <span>{session.time}</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-0.5 opacity-80">
-                          <Clock className="h-2 w-2 flex-shrink-0" />
-                          <span className="truncate">{session.time}</span>
-                        </div>
-                        <div className="mt-0.5 opacity-60 truncate">{session.type}</div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -194,22 +222,21 @@ export function Classes() {
 
             {/* Legend */}
             <div className="flex flex-wrap gap-3 mt-6 justify-center">
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="h-3 w-3 rounded bg-accent/30 border border-accent/40 inline-block"></span>
-                Birmingham (CCC HQ)
-              </div>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="h-3 w-3 rounded bg-muted/40 border border-muted/50 inline-block"></span>
-                Birmingham (BMAC)
-              </div>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="h-3 w-3 rounded bg-purple-900/40 border border-purple-500/30 inline-block"></span>
-                Leicester &amp; Oxford
-              </div>
+              {[
+                { label: "Fighters", cls: "bg-red-900/40 border-red-500/30" },
+                { label: "Womens", cls: "bg-pink-900/40 border-pink-500/30" },
+                { label: "Kids", cls: "bg-amber-900/40 border-amber-500/30" },
+                { label: "Adults", cls: "bg-blue-900/40 border-blue-500/30" },
+                { label: "Other Locations", cls: "bg-purple-900/40 border-purple-500/30" },
+              ].map(({ label, cls }) => (
+                <div key={label} className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className={`h-3 w-3 rounded border inline-block ${cls}`}></span>
+                  {label}
+                </div>
+              ))}
             </div>
-
-            <p className="text-center text-xs text-muted-foreground mt-4">
-              * CCC HQ (598 Coventry Rd, B10 0US) runs sessions every day except Monday. Contact us for exact daily times.
+            <p className="text-center text-xs text-muted-foreground mt-3">
+              All CCC HQ sessions at 598 Coventry Rd, Small Heath, Birmingham B10 0US
             </p>
           </div>
 
